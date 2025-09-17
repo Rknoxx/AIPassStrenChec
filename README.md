@@ -1,4 +1,4 @@
-# AI Based Password Stregth Checker
+# AI Based Password Strength Checker
 
 AIPassPro is a simple Python project to check the _strength of passwords_.  
 It not only shows whether a password is strong or weak, but also checks how many _data breaches_ are linked with weak passwords.  
