@@ -1,0 +1,148 @@
+/* ===== Overall Background ===== */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1b2735);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Card Container ===== */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  text-align: center;
+  width: 420px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+/* ===== Title ===== */
+.card h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #00ffe7;
+  text-shadow: 0 0 10px rgba(0,255,231,0.6);
+}
+
+/* ===== Password Input with Eye ===== */
+.password-input-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding: 14px 50px 14px 18px;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.password-input-container input:focus {
+  border-color: #00ffe7;
+  box-shadow: 0 0 12px rgba(0,255,231,0.6);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.password-input-container input::placeholder {
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.3s, transform 0.2s;
+}
+
+.eye-icon:hover {
+  color: #00ffe7;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* ===== Buttons ===== */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+/* ===== Strength Bar ===== */
+.strength-bar {
+  height: 14px;
+  border-radius: 8px;
+  margin-top: 18px;
+  transition: width 0.5s ease, background 0.5s ease;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+.weak { width: 25%; background: #ff4b5c; box-shadow: 0 0 8px #ff4b5c; }
+.medium { width: 50%; background: #ffc107; box-shadow: 0 0 8px #ffc107; }
+.strong { width: 75%; background: #28a745; box-shadow: 0 0 8px #28a745; }
+.very-strong { width: 100%; background: #007bff; box-shadow: 0 0 8px #007bff; }
+
+/* ===== Strength Text ===== */
+.strength-text {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ===== Suggestions List ===== */
+ul {
+  margin-top: 15px;
+  padding-left: 20px;
+  text-align: left;
+  color: #eee;
+}
+
+li {
+  margin: 6px 0;
+  font-size: 14px;
+  list-style-type: "🔹 ";
+}
